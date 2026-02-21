@@ -64,9 +64,12 @@ Open `code.ipynb` and run top-to-bottom.
 ├── combined_labels.json          # Point anomaly timestamps (NAB)
 └── machine_temperature_system_failure.csv
 ```
+---
+**Pankaj Somkuwar** - AI Engineer / AI Product Manager / AI Solutions Architect
 
-## Notes
+- LinkedIn: [Pankaj Somkuwar](https://www.linkedin.com/in/pankaj-somkuwar/)
+- GitHub: [@Pankaj-Leo](https://github.com/Pankaj-Leo)
+- Website: [Pankaj Somkuwar](https://www.pankajsomkuwarai.com)
+- Email: [pankaj.som1610@gmail.com](mailto:pankaj.som1610@gmail.com)
 
-- Results reproduce with `SEED=1337`.
-- Tested on Python 3.10, Prophet 1.1, PyTorch 2.x.
-- `discord_mean` / `matrix_profile` label in old results refers to the mean-window baseline, not STUMPY's true matrix profile implementation.
+

@@ -10,7 +10,6 @@ Comparing six anomaly detection methods on real-world machine sensor data from t
 | Method | Val AUROC | Val AP | Test AUROC | Test AP |
 |---|---|---|---|---|
 | **Prophet** | **0.861** | **0.440** | **0.890** | **0.825** |
-| Z-Score | 0.909 | 0.491 | 0.965 | 0.946 |
 | LSTM | 0.570 | 0.229 | 0.559 | 0.143 |
 | STL | 0.581 | 0.237 | 0.449 | 0.089 |
 | Rolling MAD | 0.506 | 0.209 | 0.516 | 0.132 |
@@ -18,13 +17,11 @@ Comparing six anomaly detection methods on real-world machine sensor data from t
 
 **Primary metric is AUROC/AP** — F1 is near-zero for all methods due to ~0.02% anomaly rate (4 events in 22,683 rows). This is expected and correct: the evaluation uses point labels from `combined_labels.json`, not NAB's wide scoring windows.
 
-Z-Score beats Prophet on this specific stream. That is an honest finding, not a flaw — the machine temperature anomalies are large enough that a simple threshold works. Prophet's advantage emerges on streams with stronger daily seasonality (e.g. cloud CPU metrics) where z-score degrades.
 
 ## Methods
 
 **Prophet** — Facebook's forecasting library. Fits additive trend + seasonality on train, scores by absolute residual on test. Handles daily cycles explicitly.
 
-**Z-Score** — Computes per-point deviation using train mean/std. Fast, interpretable baseline.
 
 **STL** — Seasonal-Trend decomposition via LOESS. Residuals used as anomaly score. Offline/retrospective.
 

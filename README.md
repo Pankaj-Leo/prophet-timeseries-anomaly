@@ -2,7 +2,7 @@
 
 Comparing six anomaly detection methods on real-world machine sensor data from the [Numenta Anomaly Benchmark (NAB)](https://github.com/numenta/NAB). The focus is on **Prophet**, which outperforms statistical baselines on streams with meaningful seasonality.
 
-![](/image.png)
+![](/image2.png)
 
 ---
 ## Results (machine_temperature_system_failure)
